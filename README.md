@@ -13,4 +13,10 @@ Spring(MVC) 기반의 ERP 시스템으로, 효율적인 재고 관리 및 물류
 ✅ **재고 관리**: 실시간 재고 조회 및 관리
 
 ## 🛠️ 기술 스택  
-| 구분 | 기술 |
+|   구분    |     기술     |
+|   언어    | Java(JDK11), HTML/CSS, JavaScript |
+|   서버    | Apache Tomcat 9.0.85 |
+| 프레임워크 | Spring , MyBatis 3.5.14 |
+|    DB     | Oracle 19c |
+|    IDE    | STS (Spring Tool Suite) 3 |
+| 라이브러리 | Lombok 1.18.34 , jQuery |
