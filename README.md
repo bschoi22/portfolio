@@ -51,3 +51,11 @@ Spring(MVC) 기반의 ERP 시스템으로, 효율적인 재고 관리 및 물류
  ├── pom.xml        # Maven 의존성 관리 파일
  ├── README.md      # 프로젝트 설명 파일
 </pre>
+
+## 🔥 주요 API 및 코드 샘플
+### 1️⃣ 재고 목록 조회 API
+```java
+@GetMapping("/inventory_list")
+public Map<String, Object> inventoryProductList(@RequestParam Map<String, Object> map) {
+    return inventoryService.getselectProductInventoryPageList(map);
+}
