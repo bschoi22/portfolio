@@ -60,7 +60,46 @@ public Map<String, Object> inventoryProductList(@RequestParam Map<String, Object
     return inventoryService.getselectProductInventoryPageList(map);
 }
 ```
+<pre>
 설명: GET /inventory/inventory_list 요청 시, 재고 목록을 조회합니다.
 파라미터: @RequestParam Map<String, Object> map → 동적 조회 조건 지원
 반환값: Map<String, Object> 형태로 재고 리스트 반환
 특징: 서비스 레이어 (inventoryService)를 호출하여 데이터 조회
+</pre>
+### 2️⃣ 특정 재고 상세 조회 API
+```java
+@GetMapping("/inventory_modify_view/{inventoryId}")
+public Inventory inventoryModifyView(@PathVariable int inventoryId) {
+    return inventoryService.getselectProductInventoryUpdate(inventoryId);
+}
+```
+<pre>
+설명: GET /inventory/inventory_modify_view/{inventoryId}를 호출하면 특정 재고의 상세 정보를 반환합니다.
+파라미터: @PathVariable int inventoryId → 조회할 재고의 ID
+반환값: Inventory 객체
+</pre>
+### 3️⃣ 재고 추가 API
+```java
+@PostMapping("/inventory_add")
+public String inventoryAdd(@RequestBody Inventory inventory) {
+    inventoryService.addInventory(inventory);
+    return "success";
+}
+```
+<pre>
+설명: POST /inventory/inventory_add 요청으로 새로운 재고를 추가합니다.
+파라미터: @RequestBody Inventory inventory → JSON 데이터를 받아 Inventory 객체로 매핑
+반환값: "success" 문자열 (실제로는 ResponseEntity 사용을 추천)
+</pre>
+### 4️⃣ 재고 삭제 API
+```java
+@DeleteMapping("/inventory_remove/{idx}")
+public String productRemove(@PathVariable int idx) {
+    inventoryService.removeInventory(idx);
+    return "success";
+}
+```
+<pre>
+설명: DELETE /inventory/inventory_remove/{idx}를 호출하면 해당 ID의 재고를 삭제합니다.
+파라미터: @PathVariable int idx → 삭제할 재고 ID
+</pre>
