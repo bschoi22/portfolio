@@ -20,3 +20,26 @@ Spring(MVC) 기반의 ERP 시스템으로, 효율적인 재고 관리 및 물류
 |    DB     | Oracle 19c |
 |    IDE    | STS (Spring Tool Suite) 3 |
 | 라이브러리 | Lombok 1.18.34 , jQuery |
+
+## 📂 프로젝트 폴더 구조
+📂 Spring_ERP
+ ├── 📂 src
+ │   ├── 📂 main
+ │   │   ├── 📂 java/com/spring/erp
+ │   │   │   ├── 📂 controller    # REST API 컨트롤러
+ │   │   │   ├── 📂 dto           # 데이터 전송 객체 (DTO)
+ │   │   │   ├── 📂 mapper        # MyBatis 매퍼 (인터페이스 + XML 포함)
+ │   │   │   ├── 📂 repository    # 데이터 액세스 계층 (DAO, Repository)
+ │   │   │   ├── 📂 service       # 비즈니스 로직 처리
+ │   │   │   ├── 📂 util          # 공통 유틸리티 클래스
+ │   │   ├── 📂 webapp/WEB-INF/spring  # Spring 설정 파일
+ │   │   │   ├── 📂 appServlet
+ │   │   │   │   ├── servlet-context.xml  # Spring MVC 설정
+ │   │   │   │   ├── tiles.xml            # Tiles 레이아웃 설정
+ │   │   │   │   ├── mybatis-config.xml   # MyBatis 설정 파일
+ │   │   │   │   ├── root-context.xml     # 애플리케이션 컨텍스트 설정
+ │   │   │   │   ├── security-context.xml # Spring Security 설정
+ │   │   │   ├── web.xml                   # 웹 애플리케이션 설정 파일
+ ├── .gitignore     # Git 제외 파일 설정
+ ├── pom.xml        # Maven 의존성 관리 파일
+ ├── README.md      # 프로젝트 설명 파일
