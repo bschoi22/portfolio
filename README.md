@@ -100,7 +100,9 @@ public String inventoryModify(@RequestBody Inventory inventory) {
 }
 ```
 <pre>
- 
+설명: PUT /inventory/inventory_modify 요청으로 기존 재고 정보를 수정합니다.
+파라미터: @RequestBody Inventory inventory → JSON 데이터를 받아 Inventory 객체로 매핑
+반환값: "success"
 </pre>
 ### 5️⃣ 재고 삭제 API
 ```java
