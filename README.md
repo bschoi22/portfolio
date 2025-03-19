@@ -59,3 +59,7 @@ Spring(MVC) 기반의 ERP 시스템으로, 효율적인 재고 관리 및 물류
 public Map<String, Object> inventoryProductList(@RequestParam Map<String, Object> map) {
     return inventoryService.getselectProductInventoryPageList(map);
 }
+설명: GET /inventory/inventory_list 요청 시, 재고 목록을 조회합니다.
+파라미터: @RequestParam Map<String, Object> map → 동적 조회 조건 지원
+반환값: Map<String, Object> 형태로 재고 리스트 반환
+특징: 서비스 레이어 (inventoryService)를 호출하여 데이터 조회
