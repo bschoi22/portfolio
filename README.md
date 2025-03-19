@@ -89,7 +89,7 @@ public String inventoryAdd(@RequestBody Inventory inventory) {
 <pre>
 설명: POST /inventory/inventory_add 요청으로 새로운 재고를 추가합니다.
 파라미터: @RequestBody Inventory inventory → JSON 데이터를 받아 Inventory 객체로 매핑
-반환값: "success" 문자열 (실제로는 ResponseEntity 사용을 추천)
+반환값: "success"
 </pre>
 ### 4️⃣ 재고 삭제 API
 ```java
