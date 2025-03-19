@@ -66,7 +66,7 @@ public Map<String, Object> inventoryProductList(@RequestParam Map<String, Object
 반환값: Map<String, Object> 형태로 재고 리스트 반환
 특징: 서비스 레이어 (inventoryService)를 호출하여 데이터 조회
 </pre>
-### 2️⃣ 특정 재고 상세 조회 API
+### 2️⃣ 수정을 위한 특정 재고 상세 조회 API
 ```java
 @GetMapping("/inventory_modify_view/{inventoryId}")
 public Inventory inventoryModifyView(@PathVariable int inventoryId) {
@@ -91,7 +91,18 @@ public String inventoryAdd(@RequestBody Inventory inventory) {
 파라미터: @RequestBody Inventory inventory → JSON 데이터를 받아 Inventory 객체로 매핑
 반환값: "success"
 </pre>
-### 4️⃣ 재고 삭제 API
+### 4️⃣ 재고 수정 API
+```java
+@PutMapping("/inventory_modify")
+public String inventoryModify(@RequestBody Inventory inventory) {
+		inventoryService.modifyInventory(inventory);
+		return "success";
+}
+```
+<pre>
+ 
+</pre>
+### 5️⃣ 재고 삭제 API
 ```java
 @DeleteMapping("/inventory_remove/{idx}")
 public String productRemove(@PathVariable int idx) {
