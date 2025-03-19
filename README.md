@@ -27,7 +27,7 @@ Spring(MVC) 기반의 ERP 시스템으로, 효율적인 재고 관리 및 물류
 📂 Spring_ERP
  ├── 📂 src
  │   ├── 📂 main
- │   │   ├── 📂 java/com/spring/erp
+ │   │   ├── 📂 java
  │   │   │   ├── 📂 auth          # 로그인 인증 관련 로직
  │   │   │   ├── 📂 controller    # REST API 컨트롤러
  │   │   │   ├── 📂 dto           # 데이터 전송 객체 (DTO)
