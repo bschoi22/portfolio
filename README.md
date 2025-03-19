@@ -22,6 +22,7 @@ Spring(MVC) 기반의 ERP 시스템으로, 효율적인 재고 관리 및 물류
 | 라이브러리 | Lombok 1.18.34 , jQuery |
 
 ## 📂 프로젝트 폴더 구조
+<pre>
 📂 Spring_ERP
  ├── 📂 src
  │   ├── 📂 main
@@ -43,3 +44,4 @@ Spring(MVC) 기반의 ERP 시스템으로, 효율적인 재고 관리 및 물류
  ├── .gitignore     # Git 제외 파일 설정
  ├── pom.xml        # Maven 의존성 관리 파일
  ├── README.md      # 프로젝트 설명 파일
+</pre>
